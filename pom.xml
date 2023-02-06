@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.ustri.digital.edgeops.services</groupId>
+		<artifactId>edgeops-core-lib</artifactId>
+		<version>4.0.4-SNAPSHOT</version>
+		<relativePath>../edgeops-core-lib/pom.xml</relativePath>
+	</parent>
+
+	<organization>
+		<name>UST Global</name>
+		<url>http://www.ust-global.com</url>
+	</organization>
+
+    <groupId>com.example</groupId>
+    <artifactId>demo</artifactId>
+    <version>1.0.0</version>
+    <name>Dagility module</name>
+    <description>Backend component module</description>
+
+	<properties>
+		<dagility.version>4.0.4-SNAPSHOT</dagility.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+	  	<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+	  
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.junit.vintage</groupId>
+					<artifactId>junit-vintage-engine</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ustri.digital.edgeops.services</groupId>
+			<artifactId>edgeops-security-lib</artifactId>
+			<version>${dagility.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ustri.digital.edgeops.services</groupId>
+			<artifactId>edgeops-hazelcast-lib</artifactId>
+			<version>${dagility.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ustri.digital.edgeops.services</groupId>
+			<artifactId>edgeops-common-lib</artifactId>
+			<version>${dagility.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ustri.digital.edgeops.services</groupId>
+			<artifactId>edgeops-domain-lib</artifactId>
+			<version>${dagility.version}</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+<!--	You need configure settings.xml for have access to artifactory.dagility.com repository-->
+	<repositories>
+		<repository>
+			<snapshots />
+			<id>dagility-snapshots</id>
+			<name>libs-snapshot</name>
+			<url>https://artifactory.dagility.com/artifactory/libs-snapshot</url>
+		</repository>
+	</repositories>
+
+</project>

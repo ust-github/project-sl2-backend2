@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    consul:
+      host: consul.edge-ops.io
+      port: 443
+      scheme: https
+      token: 99d369b1-1ffd-6daa-eb25-9099bc0acd9e
+    discovery:
+      register: true
+    vault:
+      enabled: false
+vault:
+  uri: https://vault.edge-ops.io
+  token: s.61idy9XcNRpZRzwQhSj4HcED
